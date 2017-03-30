@@ -12,6 +12,8 @@ def google_repeater(say_again):
         tts.save(tfp.name+".mp3")
         mixer.music.load(tfp.name+".mp3")
         mixer.music.play()
+        while mixer.music.get_busy():
+            pass
 # google_repeater("成功")
 try :
     print "進入try"
