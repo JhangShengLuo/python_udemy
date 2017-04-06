@@ -3,8 +3,8 @@
 block_cipher = None
 
 
-a = Analysis(['repeater.py'],
-             pathex=['/Users/jackie/Desktop/python_course'],
+a = Analysis(['/Users/Jackie/Desktop/python_course/repeater.py'],
+             pathex=['/Users/Jackie/Desktop/python_course'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -18,16 +18,11 @@ pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 exe = EXE(pyz,
           a.scripts,
-          exclude_binaries=True,
+          a.binaries,
+          a.zipfiles,
+          a.datas,
           name='repeater',
           debug=False,
           strip=False,
           upx=True,
           console=True )
-coll = COLLECT(exe,
-               a.binaries,
-               a.zipfiles,
-               a.datas,
-               strip=False,
-               upx=True,
-               name='repeater')
