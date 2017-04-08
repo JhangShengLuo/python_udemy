@@ -3,8 +3,8 @@
 block_cipher = None
 
 
-a = Analysis(['repeater.py'],
-             pathex=['/Users/jackie/Desktop/python_course'],
+a = Analysis(['/Users/Jackie/Desktop/python_course/repeater.py'],
+             pathex=['/Users/Jackie/Desktop/python_course'],
              binaries=[],
              datas=[],
              hiddenimports=[],
